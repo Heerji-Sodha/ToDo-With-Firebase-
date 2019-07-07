@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<head>
+	<!--
+    	Pro Audio
+    	http://www.templatemo.com/preview/templatemo_429_pro_audio
+    -->
+	<title>Channel News</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/templatemo_style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css1.css">
+	<!-- <link rel="manifest" href="manifest.json"> -->
+
+
+</head>
+<body>
+	<nav id="responsive-menu">
+        <ul class="menu-holder">
+            <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="espncricinfo.html"><i class="fa fa-briefcase"></i>ESPN Cric Info</a></li>
+            <li><a href="entertainmentweekly.html"><i class="fa fa-cogs"></i>Entertainment</a></li>
+            <li><a href="dailymail.html"><i class="fa fa-list"></i>Daily Mail</a></li>
+            <li><a href="#contact"><i class="fa fa-briefcase"></i>Contact</a></li>
+        </ul>
+    </nav>
+	<div class="templatemo-header">		
+		<div class="templatemo-header-gradient-bg"></div>
+		<div class="container">			
+			<h1 class="text-center text-uppercase templatemo-site-name"><span class="blue">Channel</span> News</h1>
+			<nav class="hidden-xs text-center text-uppercase templatemo-nav">
+				<ul class="menu-holder">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="espncricinfo.html">ESPN Cric Info</a></li>
+					<li><a href="entertainmentweekly.html">Entertainment</a></li>
+					<li><a href="dailymail.html">Daily Mail</a></li>					
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="text-right visible-xs">
+	            <a href="#" id="mobile_menu"><span class="fa fa-bars"></span></a>
+	        </div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="news"></div>
+	<footer class="templatemo-footer margin-top-50">
+		<div class="container">
+			<p class="text-uppercase small templatemo-copyright">Copyright &copy; 2019 <a href="#" style="color: black;font-weight: bold;font-size: 10px;">Design by: Heerji Sodha Contact: 03233874150</a></p>
+			<img src="images/go-to-top.png" alt="Go to top" class="img-responsive tm-go-to-top">
+		</div>		
+	</footer>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/templatemo_script.js"></script>
+</body>
+<script>
+
+window.addEventListener('load', async e => {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('serviceworker.js')
+            .then(async (registration) => {
+const permission = await window.Notification.requestPermission();
+if(permission !=='granted'){
+throw new Error('Permission not genrate for notification')
+
+}
+                const title = 'Simple Title';
+                const options = {
+                    body: 'Simple piece of body text.\nSecond line of body text :)'
+                };
+                registration.showNotification(title, options);
+                console.log('service worker register')
+            })
+    }
+})
+
+
+
+
+
+let api = `https://newsapi.org/v1/articles?source=entertainment-weekly&apikey=8c98666b124e44a38d4953c9152591a7`
+
+ var div = document.getElementById("news");
+ fetch(api)
+ .then((sucees) => {
+     return sucees.json();
+ }).then((data) => {
+    //  console.log(data);
+var articles = data.articles;
+console.log(articles);
+
+
+for(let key in articles){
+let div2 = document.createElement("div");
+div2.setAttribute("class","allnews");
+div.appendChild(div2);
+let titleTxt = document.createElement("h3");
+titleTxt.innerHTML = `Title : ${articles[key].title}` ;
+div2.appendChild(titleTxt);
+let img = document.createElement("img");
+img.setAttribute("class","allImg");
+img.setAttribute("src",articles[key].urlToImage);
+div2.appendChild(img);
+let newsD = document.createElement("p");
+newsD.innerHTML =`Description : ${articles[key].description}` ;
+div2.appendChild(newsD);
+let authorTxt = document.createElement("h3");
+authorTxt.setAttribute("class","autorTxt");
+authorTxt.innerHTML = `Author : ${articles[key].author}`;
+div2.appendChild(authorTxt);
+
+  
+
+    }
+
+
+ })
+
+
+
+</script>
+</html>

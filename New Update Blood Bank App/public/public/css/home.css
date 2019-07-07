@@ -1,0 +1,163 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(235, 17, 17);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: rgb(197, 98, 81);
+  }
+  
+  .active {
+    background-color: rgb(197, 98, 81);
+  }
+#logout{
+    float: right;
+}
+
+/* donate button */
+#donate{
+  background-color: rgb(170, 93, 93);
+  border-radius: 10px;
+
+  /* color: white; */
+  font-weight: bold;
+
+
+}
+/* all h1 to h6 fontfamily    */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif
+}
+/*      next */
+#country{
+  border-radius: 10px;
+ 
+}
+/*  card css total doner */
+
+#card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    margin-right: 50px;
+    background-color:rgb(170, 93, 93);
+    color: white; 
+  }
+  
+  #price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  #card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  #card button:hover {
+    opacity: 0.7;
+  }
+  /*  card group css  */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #a14f4fde;
+    margin-top: 30px;
+    height: 150px;
+    color: white;
+    width: 150px;
+  }
+
+  .card:hover{
+background-color: rgba(240, 231, 235, 0.959);
+color: black;
+transform: scale(1.1);
+
+  }
+
+  /* slider style */
+  .mySlides {
+    display:none;
+  }
+/* donat div etc  */
+#donatdiv{
+  /* border:  1px solid; */
+  margin-left: 90px;
+  width: 250px;
+  height: 40px;
+  margin-top: 20px;
+}
+  
+#footer{
+  border: 1px solid red;
+  width: 2000px;
+  margin-left: -500px;
+  
+}

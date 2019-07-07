@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="../css/home.css">
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAmFa0UrI5UF_W24ceVFR31te9Zk2642Z0",
+    authDomain: "blood-bank-658c4.firebaseapp.com",
+    databaseURL: "https://blood-bank-658c4.firebaseio.com",
+    projectId: "blood-bank-658c4",
+    storageBucket: "blood-bank-658c4.appspot.com",
+    messagingSenderId: "33727582199",
+    appId: "1:33727582199:web:50db642d5eba7638"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</head>
+<body class="w3-light-grey">
+  <div>
+    <ul>
+      <li><a class="active" href="./home.html">Home</a></li>
+      <li><a href="donner.html">Donner</a></li>
+      <li><a href="./myaccount.html">My Account</a></li>
+      <!-- <li><a href="./contact.html">Contact</a></li> -->
+      <li id="logout"><a href="../index.html">Log Out</a></li>
+    </ul>
+  </div>
+
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+
+      <!-- Left Column -->
+      <div class="w3-third">
+        <div class="w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container" style="margin-left: 90px;">
+            <img src="Heerji Sodha (47).jpg" id="imge1"
+              style="border-radius: 100%; width: 200px; height: 200px;margin-top: 20px;" alt="Avatar">
+            <div class="w3-display-bottomleft w3-container w3-text-black">
+
+            </div>
+          </div>
+          <div>
+            <h2 style="color: black;margin-left: 40px;" id="usr">Heerji Sodha</h2>
+            <div id="donatdiv">
+              <select id="bloodgroup1">
+                <option value="Select">-- Select --</option>
+                <option value="A-">A-</option>
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB-">AB-</option>
+                <option value="AB+">AB+</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+              <button id="donate" onclick="donate()"> Donate Know</button>
+            </div>
+            <div>
+              <div class="card" style="width:300px;height:150px;margin-left: 20px; border-radius: 10px;">
+                <h3>Blood Group</h3>
+                <p>A+</p>
+                <p id="A+">0</p>
+              </div>
+
+              <div class="card" style="width:300px;height:150px;margin-left: 20px;">
+                <h3>Blood Group</h3>
+                <p>A-</p>
+                <p id="A-">0</p>
+              </div>
+
+              <div class="card" style="width:300px;height:150px;margin-left: 20px;">
+                <h3>Blood Group</h3>
+                <p>B+</p>
+                <p id="B+">0</p>
+              </div>
+
+              <div class="card" style="width:300px;height:150px;margin-left: 20px;">
+                <h3>Blood Group</h3>
+                <p>B-</p>
+                <p id="B-">0</p>
+              </div>
+
+              <div class="card" style="width:300px;height:150px;margin-left: 20px;">
+                <h3>Blood Group</h3>
+                <p>O+</p>
+                <p id="O+">0</p>
+              </div>
+
+              <div class="card" style="width:300px;height:150px;margin-left: 20px;">
+                <h3>Blood Group</h3>
+                <p>O-</p>
+                <p id="O-">0</p>
+              </div>
+
+              <div class="card" style="width:300px;height:150px;margin-left: 20px;">
+                <h3>Blood Group</h3>
+                <p>AB+</p>
+                <p id="AB+">0</p>
+              </div>
+
+
+              <div class="card" style="width:300px;height:150px;margin-left: 20px;">
+                <h3>Blood Group</h3>
+                <p>AB-</p>
+                <p id="AB-">0</p>
+              </div>
+
+              <div class="card" style="width:300px;height:150px;margin-left: 20px;">
+                <h3>Total Donners</h3>
+                <p id="totaldoner">0</p>
+              </div>
+
+
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            
+          </div>
+        </div>
+
+
+      </div>
+      <!-- Right Column -->
+      <div class="w3-twothird">
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+
+          <div class="w3-content w3-section">
+            <img class="mySlides" src="../images/Please-donate-blood-on-Human-Rights-Day-21-March.jpg"
+              style="width:100%;height: 400px;">
+            <img class="mySlides" src="../images/post-img.jpg" style="width:100%; height: 400px;">
+            <img class="mySlides" src="../images/maxresdefault.jpg" style="width:100%; height: 400px;">
+          </div>
+        </div>
+        <div id="contentt">
+          <h3 style="font-weight: bold;margin-top: 10px;margin-left: 30px;">About Save Life Connect</h3>
+          <span style="font-weight: bold;margin-top: 10px;margin-left: 30px;">What is this all about?</span>
+          <p style="margin-top: 10px;margin-left: 30px;">Project Save Life Connect is an innovative approach to
+            address global health. We provide immediate access to blood donors all over Pakistan, 24 hours a day, 7
+            days a week! Save Life Connect is one of several community organizations working together as a network
+            that respond to disasters or emergency situations in an efficient manner.</p>
+          <br>
+
+          <span style="font-weight: bold;margin-top: 10px;margin-left: 30px;">How it works?</span>
+          <p style="margin-top: 10px;margin-left: 30px;">Our automated system works efficiently whenever someone needs
+            a blood transfusion. Simply post a blood a request within our system, either on this website or by
+            downloading our mobile app. As soon as a new blood request is raised, it is routed among our local
+            volunteer blood donors. We know time matters! So we keep you updated with real-time notifications sent
+            directly to you via SMS (text message) or the installed mobile app. Instead of having to search all over
+            for a blood donor in an emergency situation, you can spend your time consoling the patient. We keep you
+            updated at each step of the request process, from when a volunteer has been found to when blood is on its
+            way.</p>
+          <br>
+
+          <span style="font-weight: bold; margin-top: 10px;margin-left: 30px;">What we do?</span>
+          <p style="margin-top: 10px;margin-left: 30px;">The ultimate goal of this project is to provide an
+            easy-to-use, easy-to-access, efficient, and reliable way to get life-saving blood, free of cost. Save Life
+            Connect works with network partners to connect blood donors and recipients through an automated SMS (text
+            messaging) service or our mobile application. Our network of volunteer blood donors are ready to help save
+            lives any time, any place.</p>
+          <br>
+
+          <span style="font-weight: bold; margin-top: 10px;margin-left: 30px;">Don't have access to internet?</span>
+          <p style="margin-top: 10px;margin-left: 30px;">In case, someone is unable to use the mobile application or
+            the website or has not enough knowledge to understand how they can find a blood donor in an emergency, we
+            have an automated SMS (text message) service. All you need to do is send a text message to 8655, "blood
+            need <bloodgroup> in <your-city>". It does not need to be in english, you can write in any language you
+                want. Our automated systems are smart enough to understand everything you write and will interact with
+                you and help you find a blood donor within seconds if not minutes.</p>
+          <h2> Donner And Recipint Group</h2>
+          <img src="../images/donationChart.png" alt="group blood" style="width:100%;height: 400px;">
+
+
+          <br>
+
+
+
+
+
+
+
+
+          <br>
+          <br>
+          
+          <br>
+          <br>
+          
+          <br>
+
+<!-- 
+          <div class=" w3-teal w3-center " style="margin-top: 400px" id="footer">
+     
+              <p>Find me on social media.</p>
+              <i class="fa fa-facebook-official w3-hover-opacity"><a href=""></a></i>
+              <i class="fa fa-instagram w3-hover-opacity"><a href=""></a></i>
+              <i class="fa fa-twitter w3-hover-opacity"></i>
+              <i class="fa fa-linkedin w3-hover-opacity"></i>
+              <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Heerji Sodha</a></p>
+          
+            </div>
+   -->
+
+
+        </div>
+
+
+        
+</body>
+<script src="../js/home.js"></script>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+</head>
+
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home</a>
+    <a href="geonews.html">ABC News</a>
+    <a href="bbc.html">BBC-News</a>
+    <a href="samma.html">ANSA.it News</a>
+    <a href="ktn.html">Australian Financial </a>
+    <a href="express.html">Ary News</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+
+
+
+
+
+
+      
+<div id="news">
+
+
+
+</div>
+
+
+
+
+
+<footer style="border: 1px solid; height: 150px;margin-top: 30px; background-color: cadetblue;">
+    <p style="color: white;font-weight: bold;text-align: center">© 2019 News. All rights reserved.<br>Design: Heerji Sodha, Contact: 03233874150</p>
+      <center>
+          <a href="https://facebook.com"><img src="facebook.png" style="width: 40px;height:30px;border-radius: 10px;"></a>
+          <a href="https://facebook.com"><img src="instagram.jpg" style="width: 30px;height:30px;border-radius: 10px;"></a>
+          <a href="https://facebook.com"><img src="twiter.png" style="width: 30px;height:30px;border-radius: 10px;"></a>
+          <a href="https://facebook.com"><img src="linkinden.png" style="width: 30px;height:30px;border-radius: 10px;"></a>
+    </center>
+    </footer>
+
+</body>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+}
+
+
+
+
+window.addEventListener('load', async e => {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('webservise.js')
+            .then(() => {
+                console.log('service worker register')
+            })
+    }
+})
+
+
+let api = "https://newsapi.org/v1/articles?source=daily-mail&apiKey=93f7a4a4327244cea8fe508d4d17f72e"
+ var div = document.getElementById("news")
+ fetch(api)
+ .then((sucees) => {
+     return sucees.json();
+ }).then((data) => {
+    //  console.log(data);
+var articles = data.articles;
+console.log(articles);
+for(let key in articles){
+    div.innerHTML +=
+    "<div>"+"<h1>"+ articles[key].title+ "</h1>"
+     + "<h2>"+ articles[key].author+ "</h2>"
+   + "<p>"+articles[key].content +"</p>"
+   + "<p>"+articles[key].publishedAt + "</p>"
+   + "<p>"+articles[key].source + "</p>"
+   + "<p>"+articles[key].url + "</p>"
+  + "<img src="+articles[key].urlToImage + "/>"
++ "<p>"+articles[key].description + "</p>" +"</div>"
+
+  
+    }
+ })
+
+
+
+
+</script>
+
+</html>

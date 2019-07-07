@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/png" href="../login/images/icons/icons8-chat-room-48.png"/>
+
+  <!-- *************Sweet alert -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<!-- ================================= firebase ======================================= -->
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBB3rZWGNYUZUgmUL2H_mm6KDEfwHrytWw",
+    authDomain: "chatapplication-e9c45.firebaseapp.com",
+    databaseURL: "https://chatapplication-e9c45.firebaseio.com",
+    projectId: "chatapplication-e9c45",
+    storageBucket: "",
+    messagingSenderId: "596493595348",
+    appId: "1:596493595348:web:93fa49ef36d14f14"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+	<link rel="stylesheet" type="text/css" href="../login/css/main.css">
+	<link rel="stylesheet" type="text/css" href="../login/css/util.css">
+
+<!--===============================================================================================-->	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./../css/chat.css">
+</head>
+<body>
+
+<!-- =============== -->
+<div id="mySidenav" class="sidenav" style="background-image: url('../login/images/bg-01.jpg');">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <center>
+
+    <p id="forimg"></p>
+    <p id="forEmail"></p>
+    <br><br>
+    <div class="container-login100-form-btn">
+        <div class="wrap-login100-form-btn">
+          <div class="login100-form-bgbtn"></div>
+          <input type="button" value="log out" class="login100-form-btn btnall" id="logout">
+            
+        
+        </div>
+      </div>
+  </center>
+</div>
+
+<span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; Profile</span>
+
+<!-- ============================chat show ================================== -->
+
+<div id="ChatShow">
+    <h2 style="text-align: center">Live Message Chat </h2>
+    
+</div>
+<!-- <button class="open-button" onclick="openForm()">Chat</button> -->
+<!-- ============ -->
+<div class="container-login100-form-btn open-button" >
+  <div class="wrap-login100-form-btn">
+    <div class="login100-form-bgbtn"></div>
+    <input type="button" value="Chat Now" class="login100-form-btn btnall " id="signup" onclick="openForm()">
+      
+  
+  </div>
+</div>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+
+    <label for="msg"><b>Message</b></label>
+    <textarea id="messageWrite" placeholder="Type message.." name="msg" required></textarea>
+
+    <!-- <input type="button" class="btn" value="Send" id="sendBtn">
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+
+    <div class="container-login100-form-btn btn">
+      <div class="wrap-login100-form-btn">
+        <div class="login100-form-bgbtn"></div>
+        <input type="button" value="Send" class="login100-form-btn btnall" id="sendBtn">
+          
+      
+      </div>
+    </div>
+
+
+    <div class="container-login100-form-btn btn">
+      <div class="wrap-login100-form-btn">
+        <div class="login100-form-bgbtn"></div>
+        <input type="button" value="Close" class="login100-form-btn btnall" onclick="closeForm()">
+          
+      
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+<script src="./../js/chat.js"></script>
+</html>

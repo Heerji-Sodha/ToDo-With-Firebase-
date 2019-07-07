@@ -1,0 +1,24 @@
+.newsHeadLine{
+	text-align: center;
+	background-color: #8c99a4;
+	color: white
+}
+.allnews{
+	background-color: #8c99a4;
+	margin-bottom: 20px;
+	border: 2px solid #566a7c;
+	text-align: center;
+	color: white
+	
+
+}
+.autorTxt{
+	color: black;
+	font-weight: initial;
+	text-decoration: underline;	
+}
+
+.allImg{
+	width: 100%;
+	border-radius: 20px
+}

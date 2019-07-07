@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <!-- ***************************** firebase ****************************** -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAmFa0UrI5UF_W24ceVFR31te9Zk2642Z0",
+    authDomain: "blood-bank-658c4.firebaseapp.com",
+    databaseURL: "https://blood-bank-658c4.firebaseio.com",
+    projectId: "blood-bank-658c4",
+    storageBucket: "blood-bank-658c4.appspot.com",
+    messagingSenderId: "33727582199",
+    appId: "1:33727582199:web:50db642d5eba7638"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+		<meta charset="utf-8">
+		<title>Log in</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="./fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/jpg" href="./images/Hand__5-512.png">
+
+	</head>
+
+	<body>
+
+		<div class="wrapper" style="background-image: url('./images/bg-registration-form-2.jpg');">
+
+			<div class="inner">
+				<form action="">
+					<h3 di="heading">Log in</h3>
+				
+					<div class="form-wrapper">
+						<label for="">Email</label>
+						<input type="text" class="form-control" id="email" required="">
+					</div>
+					<div class="form-wrapper">
+						<label for="">Password</label>
+						<input type="password" class="form-control"  id="password" required="">
+					</div>
+				<p id="showError"></p>
+					<div class="checkbox">
+						<label class="form-wrapper">
+							<p>Don't have an Account? <a href="./html/signup.html"> Sign Up Now !</a></p>
+						</label>
+					</div>
+					<input type="button" value="Log in" class="allBTn" id="login">
+				</form>
+			</div>
+		</div>
+		
+	</body>
+	<script src="./js/login.js"></script>
+</html>

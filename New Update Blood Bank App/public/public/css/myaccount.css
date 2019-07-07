@@ -1,0 +1,134 @@
+/*  nav bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(235, 17, 17);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: rgb(197, 98, 81);
+  }
+  
+  .active {
+    background-color: rgb(197, 98, 81);
+  }
+#logout{
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#alldatadiv{
+width: 350px;
+height: 480px;
+background-color:rgb(206, 142, 131);
+border: 1px solid;
+margin-top: 30px;
+color: white;
+margin-left: 20px;
+border-radius: 20px;
+}
+
+#alldatadiv:hover{
+  transform: scale(1.1);
+}
+
+/*  div user data  */
+#userimg{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+#name1{
+    margin-left: 20px;
+    font-size: 20px;
+    
+
+}
+#age1{
+    margin-left: 20px;
+    font-size: 20px;
+    
+}
+#contact1{
+    margin-left: 20px;
+    font-size: 20px;
+    
+}
+#city1{
+    margin-left: 20px;
+    font-size: 20px;
+    
+}
+#address1{
+    margin-left: 20px;
+    font-size: 20px;
+    
+}
+#name1{
+    margin-left: 20px;
+    font-size: 20px;
+    
+}
+#email1{
+  margin-left: 20px;
+  font-size: 20px;
+  
+}
+
+
+#update{
+margin: auto;
+/* margin-left: 140px; */
+width: 350px;
+font-size: 30px;
+background-color:rgb(206, 142, 131);
+color: white;
+/* font-weight: bold; */
+border-radius: 10px;
+
+}
+
+#update:hover{
+  background-color: rgb(90, 31, 31);
+  color: white;
+}
+
+.btn22{
+  font-weight: bold;
+  background-color: red;
+
+}
+
+.btn33{
+  font-weight: bold;
+  background-color: green;
+
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Donner</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <link rel="stylesheet" href="../css/donner.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAmFa0UrI5UF_W24ceVFR31te9Zk2642Z0",
+    authDomain: "blood-bank-658c4.firebaseapp.com",
+    databaseURL: "https://blood-bank-658c4.firebaseio.com",
+    projectId: "blood-bank-658c4",
+    storageBucket: "blood-bank-658c4.appspot.com",
+    messagingSenderId: "33727582199",
+    appId: "1:33727582199:web:50db642d5eba7638"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</head>
+<body>
+        <div>
+                <ul>
+                  <li><a class="active" href="./home.html">Home</a></li>
+                  <li><a href="donner.html">Donner</a></li>
+                  <li><a href="./myaccount.html">My Account</a></li>
+                  <!-- <li><a href="./contact.html">Contact</a></li> -->
+                  <li id="logout"><a href="../index.html" >Log Out</a></li>
+                </ul>
+                     </div>
+                     <di>
+    
+    <div style="border:1px solid;height:60px ;background-color: rgb(235, 17, 17)">
+
+<div id="blodgroup">
+  <select id="bloodgroups">
+    <option value="">-- Select Blood group --</option>
+    <option value="A+">A+</option>
+    <option value="A-">A-</option>
+    <option value="B+">B+</option>
+    <option value="B-">B-</option>
+    <option value="O+">O+</option>
+    <option value="O-">O-</option>
+    <option value="AB+">AB+</option>
+    <option value="AB-">AB-</option>
+  </select>
+</div>
+
+
+<div id="cityfltr">
+  <select id="country" onclick="cityfltr()">
+    <option value="">-- Select Your City  --</option>
+    <option value="MITHI">Mithi</option>
+    <option value="KARACHI">Karachi</option>
+    <option value="HYDERABAD">Hydrabad</option>
+    <option value="UMERKOT">Umerkot</option>
+    <option value="ISLAMKOT">Islamkot</option>
+    <option value="ISLAMABAD">Islamabad</option>
+  </select>
+</div>
+
+
+<!-- 
+<div id="serch">
+  <select id="country" onclick="cityfltr()">
+    <option value="None">-- Select Your City  --</option>
+    <option value="A-">Mithi</option>
+    <option value="A+">Karachi</option>
+    <option value="B+">Hydrabad</option>
+    <option value="B-">Umerkot</option>
+    <option value="A-">Islamkot</option>
+    <option value="A+">Islamabad</option>
+  </select>
+</div>
+</di>
+
+ <div id="cityfltr">
+  <select id="country" onclick="cityfltr()">
+    <option value="None">-- Select --</option>
+    <option value="A-">Mithi</option>
+    <option value="A+">Karachi</option>
+    <option value="B+">Hydrabad</option>
+    <option value="B-">Umerkot</option>
+    <option value="A-">Islamkot</option>
+    <option value="A+">Islamabad</option>
+  </select>
+</div>  -->
+
+
+
+
+<div id="mandiv">
+
+
+
+</div>
+
+</body>
+<script src="../js/donner.js"></script> 
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Account</title>
+  <link rel="stylesheet" href="../css/moredetail.css">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAmFa0UrI5UF_W24ceVFR31te9Zk2642Z0",
+      authDomain: "blood-bank-658c4.firebaseapp.com",
+      databaseURL: "https://blood-bank-658c4.firebaseio.com",
+      projectId: "blood-bank-658c4",
+      storageBucket: "blood-bank-658c4.appspot.com",
+      messagingSenderId: "33727582199",
+      appId: "1:33727582199:web:50db642d5eba7638"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</head>
+
+<body>
+  <div>
+    <ul>
+      <li><a class="active" href="./home.html">Home</a></li>
+      <li><a href="./donner.html">Donner</a></li>
+      <li><a href="myaccount.html">My Account</a></li>
+      <!-- <li><a href="./contact.html">Contact</a></li> -->
+      <li id="logout"><a href="../index.html">Log Out</a></li>
+    </ul>
+  </div>
+  <div id="alldatadiv">
+    <img src="../images/Heerji Sodha (47).jpg" alt="" id="userimg">
+    <br>
+    <p id="name1">Name: <span id="name"></span></p>
+    <p id="age1">Age: <span id="age"></span></p>
+    <p id="blood1">Blood: <span id="blood"></span></p>
+    <p id="contact1">Phone: <span id="phone"></span></p>
+    <p id="city1">City: <span id="city"></span></p>
+    <p id="address1">Address: <span id="address"></span></p>
+    <p id="email1">Email: <span id="email"></span></p>
+    <button onclick="request()" id="update">Request</button>
+  </div>
+
+
+</body>
+<script src="../js/moredetail.js"></script>
+
+</html>

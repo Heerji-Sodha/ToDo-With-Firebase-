@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <!-- ***************************** firebase ****************************** -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAmFa0UrI5UF_W24ceVFR31te9Zk2642Z0",
+    authDomain: "blood-bank-658c4.firebaseapp.com",
+    databaseURL: "https://blood-bank-658c4.firebaseio.com",
+    projectId: "blood-bank-658c4",
+    storageBucket: "blood-bank-658c4.appspot.com",
+    messagingSenderId: "33727582199",
+    appId: "1:33727582199:web:50db642d5eba7638"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    <link rel="icon" type="image/jpg" href="../images/Hand__5-512.png">
+
+		<meta charset="utf-8">
+		<title>Sign Up</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="../fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="../css/style.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper" style="background-image: url('images/bg-registration-form-2.jpg');">
+			<div class="inner">
+				<form action="">
+					<h3 di="heading">Sign Up</h3>
+					<div class="form-group">
+						<div class="form-wrapper">
+							<label for="">Full Name<span id="fullNameText" class="requiredField"></span></label>
+							<input type="text" class="form-control" id="fullName" required="">
+						<p id="fullNameText" class="requiredField"></p>
+						</div>
+						<div class="form-wrapper">
+							<label for="">Age<span id="ageText" class="requiredField"></span></label>
+							<input type="number" class="form-control" id="age" required="">
+		
+
+						</div>
+					</div>
+					<div class="form-wrapper">
+						<label for="">Contact Number <span id="numberText" class="requiredField"></span></label>
+						<input type="number" class="form-control" id="contact" required="">
+		
+
+					</div>
+					<div class="form-wrapper">
+						<label for="">City <span id="cityText" class="requiredField"></span></label>
+						<input type="text" class="form-control" id="city" required="">
+				
+
+					</div>
+					<div class="form-wrapper">
+						<label for="">Address <span id="addressText" class="requiredField"></span></label>
+						<input type="text" class="form-control" id="address" required="">
+				
+					</div>
+					<div class="form-wrapper">
+						<label for="">Email <span id="emailText" class="requiredField"></span></label>
+						<input type="text" class="form-control" id="email" required="">
+			
+
+					</div>
+					<div class="form-wrapper">
+						<label for="">Password <span id="passwordText" class="requiredField"></span></label>
+						<input type="password" class="form-control" id="password" required="">
+				
+
+					</div>
+					<div class="form-wrapper">
+						<label for="">Profile Picture <span id="fileText" class="requiredField"></span></label>
+						<input type="file" class="form-control" id="imageUpload" required="">
+		
+
+					</div>
+					<p id="showError"></p>
+					<div class="checkbox">
+						<label class="form-wrapper">
+							<p>You have an Account? <a href="../index.html"> log in Now !</a></p>
+						</label>
+					</div>
+					
+					<input type="button" class="allBTn" id="signup" value="Sign Up">
+				</form>
+			</div>
+		</div>
+		
+	</body>
+	<script src="../js/signup.js"></script>
+</html>
